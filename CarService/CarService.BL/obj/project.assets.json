@@ -1,0 +1,84 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CarService.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/CarService.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarService.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarService.Common/1.0.0": {
+      "type": "project",
+      "path": "../CarService.Common/CarService.Common.csproj",
+      "msbuildProject": "../CarService.Common/CarService.Common.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "CarService.Common >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\VoskolovychOS\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Solutions\\CarService\\CarService\\CarService.BL\\CarService.BL.csproj",
+      "projectName": "CarService.BL",
+      "projectPath": "D:\\Solutions\\CarService\\CarService\\CarService.BL\\CarService.BL.csproj",
+      "packagesPath": "C:\\Users\\VoskolovychOS\\.nuget\\packages\\",
+      "outputPath": "D:\\Solutions\\CarService\\CarService\\CarService.BL\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\VoskolovychOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "D:\\Solutions\\CarService\\CarService\\CarService.Common\\CarService.Common.csproj": {
+              "projectPath": "D:\\Solutions\\CarService\\CarService\\CarService.Common\\CarService.Common.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

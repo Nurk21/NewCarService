@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarService.BL\CarService.BL.csproj" />
+    <ProjectReference Include="..\CarService.Common\CarService.Common.csproj" />
+    <ProjectReference Include="..\CarService.DAL\CarService.DAL.csproj" />
+  </ItemGroup>
+
+
+</Project>
