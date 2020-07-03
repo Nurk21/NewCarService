@@ -2,3 +2,5 @@ D:\Solutions\CarService\CarService\CarService.Common\obj\Debug\netcoreapp3.1\Car
 D:\Solutions\CarService\CarService\CarService.Common\obj\Debug\netcoreapp3.1\CarService.Common.AssemblyInfoInputs.cache
 D:\Solutions\CarService\CarService\CarService.Common\obj\Debug\netcoreapp3.1\CarService.Common.AssemblyInfo.cs
 D:\Solutions\CarService\CarService\CarService.Common\obj\Debug\netcoreapp3.1\CarService.Common.csproj.CoreCompileInputs.cache
+D:\Solutions\CarService\CarService\CarService.Common\bin\Debug\netcoreapp3.1\CarService.Common.deps.json
+D:\Solutions\CarService\CarService\CarService.Common\bin\Debug\netcoreapp3.1\CarService.Common.dll

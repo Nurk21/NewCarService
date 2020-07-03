@@ -24,7 +24,7 @@ namespace CarService.Common.Models.Cars
     //{
         
     //}
-    public abstract class BaseCar<T> : IBaseCar
+    public abstract class BaseCar : IBaseCar
     { 
         public List<DetailConditionEnum> Wheels { get; set; }
         public DetailConditionEnum Body { get; set; }

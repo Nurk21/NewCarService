@@ -3,18 +3,24 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CarService.BL.Services
 {
-    public interface IRepairService<T>
+    //public interface IRepairService<T>
+    //{
+    //    double EstimateRepair<T>(T carType);
+    //}
+    public interface IRepairService<T> where T : BaseCar
     {
         double EstimateRepair<T>(T carType);
+        Task Repair();
     }
-    
-    public class RepairService
+
+    public class RepairService<T> : IRepairService<T> where T : BaseCar
     {
        
-        public double EstimateRepair<T>(T carType)  where T : BaseCar<T>
+        public double EstimateRepair<T>(T carType) where T : BaseCar
         {
             return carType.EstimateRepair();
             

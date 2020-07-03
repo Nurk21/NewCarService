@@ -25,16 +25,17 @@ namespace CarService.DAL.Repositories
     {
         //private readonly IConnectionFactory _connectionFactory;
         //private readonly ILogRequestsHandler _logRequestsHandler;
-        public MongoRepository(/*IConnectionFactory connectionFactory*/ /*ILogRequestsHandler logRequestsHandler*/)
-        {
-            //_connectionFactory = connectionFactory;
-            //_logRequestsHandler = logRequestsHandler;
-        }
+        //public MongoRepository(/*IConnectionFactory connectionFactory*/ /*ILogRequestsHandler logRequestsHandler*/)
+        //{
+           
+        //    //_connectionFactory = connectionFactory;
+        //    //_logRequestsHandler = logRequestsHandler;
+        //}
 
         protected IMongoCollection<TEntity> Collection { get; }
 
         public MongoRepository(IMongoDatabase database, string collectionName)
-        {
+        {            
             Collection = database.GetCollection<TEntity>(collectionName);
         }
 

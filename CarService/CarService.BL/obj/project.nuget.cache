@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "D3neXat/fSwiM7tLGDb2IJKYQ8paqjRUcEyoUR86IhoZQAuztFhQDrVumaxpHpFR3Z3RXX21AWgF9mVm6LVBXw==",
+  "dgSpecHash": "X62tyRx2rhtwxeKpfyzeRVnS6YeRymCHs6adkXKOf2/HDZtUc+BjtRYMSq9zum9VKUKzaoeJZ9AQOUoCCP5tEQ==",
   "success": true,
   "projectFilePath": "D:\\Solutions\\CarService\\CarService\\CarService.BL\\CarService.BL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\VoskolovychOS\\.nuget\\packages\\mediatr\\8.0.2\\mediatr.8.0.2.nupkg.sha512",
+    "C:\\Users\\VoskolovychOS\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.0.1\\mediatr.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\VoskolovychOS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

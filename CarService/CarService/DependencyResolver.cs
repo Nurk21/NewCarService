@@ -1,4 +1,6 @@
-﻿using CarService.DAL.Repositories;
+﻿using CarService.Common.DTO;
+using CarService.DAL.Repositories;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -30,6 +32,7 @@ namespace CarService
 
         private static void Services(IServiceCollection services)
         {
+            services.AddMediatR(typeof(Startup));
             //services.AddScoped<IClientPaymentDataService, ClientPaymentDataService>();
             //services.AddScoped<IOschadPaymentService, OschadPaymentService>();
             //services.AddScoped<ICryptographyService, CryptographyService>();
@@ -44,7 +47,8 @@ namespace CarService
 
         private static void Repositories(IServiceCollection services)
         {
-            //services.AddScoped<IMongoRepository, MongoRepository<T>>;
+
+            services.AddScoped<IMongoRepository<SuccessfulRepairDTO>, MongoRepository<SuccessfulRepairDTO>>();
         }
 
     }
