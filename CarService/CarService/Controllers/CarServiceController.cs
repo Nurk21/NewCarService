@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CarService.BL.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,17 +7,26 @@ using System.Threading.Tasks;
 
 namespace CarService.Controllers
 {
-    public class CarServiceController : Controller
+    [ApiController]
+    [Route("[controller]/[action]")]
+    public class CarServiceController : ControllerBase
     {
         private readonly IRepairService _repairService;
         public CarServiceController(IRepairService repairService)
         {
             _repairService = repairService;
         }
-        public ActionResult EstimateRepair<T>(T type)
+        [HttpPost]
+        
+        public async Task<ActionResult> EstimateRepair<T>([FromBody]T type)
         {
-            _repairService.EstimateRepair(type);
-            return View();
+            return await Ok(_repairService.EstimateRepair(type));
+        }
+        [HttpPost]
+
+        public async Task<ActionResult> Repair<T>([FromBody] T type)
+        {
+            return await Ok(_repairService.EstimateRepair(type));
         }
     }
 }

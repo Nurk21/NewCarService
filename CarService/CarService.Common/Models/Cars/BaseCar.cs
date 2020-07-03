@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace CarService.Common.Models.Cars
@@ -17,14 +18,21 @@ namespace CarService.Common.Models.Cars
         public DetailConditionEnum Undecarriage { get; set; }
         public DetailConditionEnum Engine { get; set; }
         public List<DetailConditionEnum> Doors { get; set; }
+        double EstimateRepair();
     }
-    public class BaseCar : IBaseCar 
+    //public interface IBaseCar<T> 
+    //{
+        
+    //}
+    public abstract class BaseCar<T> : IBaseCar
     { 
         public List<DetailConditionEnum> Wheels { get; set; }
         public DetailConditionEnum Body { get; set; }
         public DetailConditionEnum Undecarriage { get; set; }
         public DetailConditionEnum Engine { get; set; }
         public List<DetailConditionEnum> Doors { get; set; }
+        public abstract double EstimateRepair(); 
+        
 
         //public BaseCar(BaseCarEnum wheels, BaseCarEnum body, BaseCarEnum undecarriage, BaseCarEnum engine)
         //{
