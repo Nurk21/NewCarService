@@ -6,9 +6,8 @@ using System.Text;
 namespace CarService.Common.Models.Cars
 {
     public enum DetailConditionEnum
-    {
-        NoNeedInRepair = 1,
-        Repair,
+    {        
+        Repair = 1,
         Replacement
     }
     public interface IBaseCar
