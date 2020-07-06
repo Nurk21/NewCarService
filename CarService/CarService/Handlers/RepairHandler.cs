@@ -17,9 +17,9 @@ namespace CarService.Handlers
     public class RepairHandler : IRequestHandler<RepairQuery, IActionResult>
     {
         private readonly IRepairService<T> _repairService;
-        public RepairHandler(IRepairService<T> repairService)
+        public RepairHandler(/*IRepairService<T> repairService*/ IServiceProvider serviceProvider)
         {
-            _repairService = repairService;
+            _repairService = serviceProvider.GetRequiredService<IRepairService<T>>();
         }
         public async Task<IActionResult> Handle(RepairQuery request, CancellationToken cancellationToken)
         {             
