@@ -4,12 +4,8 @@ using System.Text;
 
 namespace CarService.Common.Models.Cars
 {
-    public class Truck : BaseCar<Truck>, IBaseCar
+    public class Truck : BaseCar, IBaseCar
     {
-        public Truck()
-        {
-
-        }
         public override double EstimateRepair()
         {
             int itemSwitch = 1;

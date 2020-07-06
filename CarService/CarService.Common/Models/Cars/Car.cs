@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarService.Common.Models.Cars
 {
-    public class Car: BaseCar<Car>, IBaseCar
+    public class Car: BaseCar, IBaseCar
     {
         public override double EstimateRepair()
         {

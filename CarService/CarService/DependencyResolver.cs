@@ -1,4 +1,7 @@
-﻿using CarService.Common.DTO;
+﻿using CarService.BL.Services;
+using CarService.Common.DTO;
+using CarService.Common.Models.Cars;
+using CarService.Controllers;
 using CarService.DAL.Repositories;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace CarService
@@ -15,7 +19,7 @@ namespace CarService
         public static void Resolve(IServiceCollection services, IConfiguration configuration)
         {
             var appSettingSection = configuration.GetSection("AppSettings");
-            services.Configure<AppSettings>(appSettingSection);
+            //services.Configure<AppSettings>(appSettingSection);
             services.AddMemoryCache();
             services.AddRouting();
             Repositories(services);
@@ -32,7 +36,9 @@ namespace CarService
 
         private static void Services(IServiceCollection services)
         {
-            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddScoped<IRepairService<BaseCar>, RepairService<BaseCar>>();
+            //services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(Startup));
             //services.AddScoped<IClientPaymentDataService, ClientPaymentDataService>();
             //services.AddScoped<IOschadPaymentService, OschadPaymentService>();
             //services.AddScoped<ICryptographyService, CryptographyService>();
@@ -48,7 +54,7 @@ namespace CarService
         private static void Repositories(IServiceCollection services)
         {
 
-            services.AddScoped<IMongoRepository<SuccessfulRepairDTO>, MongoRepository<SuccessfulRepairDTO>>();
+            //services.AddScoped<IMongoRepository<SuccessfulRepairDTO>, MongoRepository<SuccessfulRepairDTO>>();
         }
 
     }

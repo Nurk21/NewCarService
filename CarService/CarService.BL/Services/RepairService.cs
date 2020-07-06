@@ -13,19 +13,18 @@ namespace CarService.BL.Services
     //}
     public interface IRepairService<T> where T : BaseCar
     {
-        double EstimateRepair<T>(T carType);
+        double EstimateRepair(T carType);
         Task Repair();
     }
 
     public class RepairService<T> : IRepairService<T> where T : BaseCar
     {
        
-        public double EstimateRepair<T>(T carType) where T : BaseCar
+        public double EstimateRepair(T carType)
         {
             return carType.EstimateRepair();
-            
 
-
+            #region Comments
             //double totalPrice = 0; 
             //foreach (var prop in carType.GetType().GetProperties())
             //{
@@ -51,14 +50,16 @@ namespace CarService.BL.Services
             //            };
             //        }
             //    }
-                    
+
             //}
             //return totalPrice;
+
+            #endregion
         }
-        public void Repair()
+
+        Task IRepairService<T>.Repair()
         {
-            //Add data to DB
-            
+            throw new NotImplementedException();
         }
     }
 }

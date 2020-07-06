@@ -50,7 +50,7 @@ namespace CarService.Common
             Handrails = 1000,
             Seats = 2000,
             LargeWheels = 2500,
-            Trunk = 3000;
+            Trunk = 3000
         }
     }
 }

@@ -1,13 +1,10 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CarService.Common.Models.Cars;
+using MediatR;
 
 namespace CarService.Queries
 {
-    public class EstimateRepairQuery : IRequest<double>
+    public class EstimateRepairQuery : IRequest<object>
     {
-
+        public BaseCar BaseCar { get; set; }
     }
 }
